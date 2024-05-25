@@ -1,5 +1,6 @@
 from graphics import Window
 from maze import Maze
+import random
 
 def main():
     num_rows = 12
@@ -11,7 +12,13 @@ def main():
     cell_size_y = (screen_y - 2 * margin) / num_rows
     win = Window(screen_x, screen_y)
 
-    maze = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win)
+    size_of = random.randint()
+    seed = 0
+
+    for i in range(size_of):
+        seed += ((10 ** i) * random.randint())
+
+    maze = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win, seed)
 
     print("maze created")
     is_solveable = maze.solve()
