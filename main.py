@@ -12,11 +12,11 @@ def main():
     cell_size_y = (screen_y - 2 * margin) / num_rows
     win = Window(screen_x, screen_y)
 
-    size_of = random.randint()
+    size_of = random.randint(0, 10)
     seed = 0
 
     for i in range(size_of):
-        seed += ((10 ** i) * random.randint())
+        seed += ((10 ** i) * random.randint(0, 10))
 
     maze = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win, seed)
 
