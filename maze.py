@@ -19,9 +19,9 @@ class Maze:
         self.__break_entrance_and_exit()
 
         if seed == None:
-            self.__factor = random.seed(10)
+            random.seed(10)
         else:
-            self.__factor = random.seed(seed)
+            random.seed(seed)
 
         self.__break_walls_r(0, 0)
         self.__reset_cells_visited()
